@@ -5,7 +5,7 @@ console.log(galleryItems);
 
 const imageContainer = document.querySelector(".gallery");
 const imageMarkup = createGalleryMarkup(galleryItems);
-imageContainer.insertAdjacentHTML("beforebegin", imageMarkup);
+imageContainer.insertAdjacentHTML("beforeend", imageMarkup);
 
 function createGalleryMarkup(images) {
   return images
