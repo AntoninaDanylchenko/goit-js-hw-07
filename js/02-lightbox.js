@@ -21,14 +21,14 @@ new SimpleLightbox(".gallery a", {
   captionDelay: 250,
 });
 
-imageContainer.addEventListener("click", onContainerClickTakesImgUrl);
+imageContainer.addEventListener("click", onContainerClickEvent);
 
-function onContainerClickTakesImgUrl(evt) {
+function onContainerClickEvent(evt) {
   evt.preventDefault();
 
   isImgFromContainerFunction(evt);
-  evt.targer.SimpleLightbox();
 }
+
 function isImgFromContainerFunction(evt) {
   const isImgFromContainer = evt.target.classList.contains("gallery__image");
 
