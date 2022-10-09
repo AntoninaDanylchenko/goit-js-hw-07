@@ -43,4 +43,14 @@ function onContainerClickTakesImgUrl(evt) {
       instance.close();
     }
   });
+
+  const visible = basicLightbox.visible();
+
+  if (!visible) {
+    window.removeEventListener("keydown", (evt) => {
+      if (evt.code === "Escape") {
+        instance.close();
+      }
+    });
+  }
 }
