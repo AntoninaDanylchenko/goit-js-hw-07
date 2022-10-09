@@ -38,13 +38,9 @@ function onContainerClickTakesImgUrl(evt) {
 
   instance.show();
 
-  imageContainer.addEventListener(
-    "keydown",
-    (evt) => {
-      if (evt.code === "Escape") {
-        instance.close();
-      }
-    },
-    { once: true }
-  );
+  window.addEventListener("keydown", (evt) => {
+    if (evt.code === "Escape") {
+      instance.close();
+    }
+  });
 }

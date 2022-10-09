@@ -22,17 +22,3 @@ new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
-
-imageContainer.addEventListener("click", onContainerClickEvent);
-
-function onContainerClickEvent(evt) {
-  evt.preventDefault();
-
-  isImgFromContainerFunction(evt);
-}
-
-function isImgFromContainerFunction(evt) {
-  const isImgFromContainer = evt.target.classList.contains("gallery__image");
-
-  !isImgFromContainer?.return;
-}
