@@ -27,7 +27,11 @@ imageContainer.addEventListener("click", onContainerClickTakesImgUrl);
 function onContainerClickTakesImgUrl(evt) {
   evt.preventDefault();
 
-  isImgFromContainerFunction(evt);
+  const isImgFromContainer = evt.target.classList.contains("gallery__image");
+
+  if (!isImgFromContainer) {
+    return;
+  }
 
   const instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" width="800" height="600">`);
@@ -43,10 +47,4 @@ function onContainerClickTakesImgUrl(evt) {
     },
     { once: true }
   );
-}
-
-function isImgFromContainerFunction(evt) {
-  const isImgFromContainer = evt.target.classList.contains("gallery__image");
-
-  !isImgFromContainer?.return;
 }
